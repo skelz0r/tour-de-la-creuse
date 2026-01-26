@@ -30,38 +30,50 @@
 - [ ] Sortie C: Longue 2h30-3h (WE)
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
-- [ ] Bilan février: noter sensations, progrès
+- [ ] **BILAN PHASE 1** (voir questions ci-dessous)
+
+#### Questions bilan Phase 1
+1. Sensations générales sur les sorties longues (2h+)? Frais / OK / Cramé?
+2. Douleurs ou gênes récurrentes? (genoux, dos, selle)
+3. Fréquence cardiaque: stable en endurance ou dérive?
+4. As-tu tenu les 3 sorties/semaine? Si non, pourquoi?
+5. Nutrition: as-tu testé des trucs sur sortie longue?
+
+**Ajustement selon réponses:**
+- Si cramé → réduire volume S5-6, garder intensité basse
+- Si frais → on peut accélérer la progression volume
+- Si douleurs → identifier cause avant d'augmenter
 
 ---
 
 ## PHASE 2: FORCE & DÉNIVELÉ SIMULÉ (Mars)
 
 ### Semaine 5 (23 fév - 1 mar)
-- [ ] Sortie A: Endurance 1h30
+- [ ] Sortie A: Endurance 1h30 + chercher du dénivelé (ponts, côtes)
 - [ ] Sortie B: Force 1h15 (6x5min gros braquet)
-- [ ] Sortie C: Longue 3h (WE)
+- [ ] Sortie C: Longue 3h-3h30 (WE) - selon bilan S4
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
 
 ### Semaine 6 (2-8 mar)
-- [ ] Sortie A: Endurance 1h30
+- [ ] Sortie A: Endurance 1h30 + dénivelé
 - [ ] Sortie B: Force 1h15 (6x5min)
-- [ ] Sortie C: Longue 3h (WE) - finir fatigué
+- [ ] Sortie C: Longue 3h-3h30 (WE) - finir fatigué mais pas détruit
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
 
 ### Semaine 7 (9-15 mar)
-- [ ] Sortie A: Endurance 1h30
+- [ ] Sortie A: Endurance 1h30 + dénivelé
 - [ ] Sortie B: Force 1h15 (6x5min)
-- [ ] Sortie C: Longue 3h-3h30 (WE)
+- [ ] Sortie C: Longue 3h30 (WE) - viser 200m D+ minimum
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
-- **Option:** WE Pyrénées #1 (voir section délocalisées)
+- **Option:** WE Pyrénées #1 (voir section délocalisées) - FORTEMENT RECOMMANDÉ
 
 ### Semaine 8 (16-22 mar)
 - [ ] Sortie A: Endurance 1h30
 - [ ] Sortie B: Force 1h15
-- [ ] Sortie C: Longue 3h30 (WE)
+- [ ] Sortie C: Longue 3h30-4h (WE) - selon sensations
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
 
@@ -71,7 +83,20 @@
 - [ ] Sortie C: Longue 3h30 (WE) - tester nutrition tour
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
-- [ ] Bilan mars: noter sensations, progrès force
+- [ ] **BILAN PHASE 2** (voir questions ci-dessous)
+
+#### Questions bilan Phase 2
+1. Tu tiens 3h30 sans problème? Sensation en fin de sortie?
+2. Travail force: jambes plus puissantes ou pas de diff?
+3. As-tu fait le WE Pyrénées #1? Si oui: comment t'as géré le D+?
+4. Dénivelé max atteint sur une sortie? (ton record = 559m)
+5. Poids stable? Sommeil OK?
+6. Confiance sur l'objectif "finir le tour"? (1-10)
+
+**Ajustement selon réponses:**
+- Si WE Pyrénées pas fait → IMPÉRATIF de le caler S10-11
+- Si 3h30 difficile → réduire ambitions enchaînements
+- Si confiance basse → discuter des points bloquants
 
 ---
 
@@ -114,7 +139,20 @@
 - [ ] Sortie B: Force 1h
 - [ ] WE enchaînement: Sam 2h + Dim 3h
 - [ ] Renfo 1: Lafay
-- [ ] Bilan avril: noter sensations enchaînements
+- [ ] **BILAN PHASE 3** (voir questions ci-dessous)
+
+#### Questions bilan Phase 3
+1. Enchaînement Sam+Dim: comment tu te sens le dimanche matin?
+2. Sortie la plus longue réalisée? Distance et D+?
+3. As-tu fait le stage Oloron ou WE Pyrénées #2?
+4. Gestion nutrition sur 4h+: ça passe? Fringales?
+5. Matériel: cuissard tient 4h sans douleur? Selle OK?
+6. Mentalement: tu te vois finir les 3 jours? Quelles craintes?
+
+**Ajustement selon réponses:**
+- Si enchaînements difficiles → affûtage plus long (réduire S15)
+- Si jamais fait de montagne → ALERTE ROUGE, caler sortie D+ en urgence
+- Si problème matos → régler MAINTENANT, pas en S16
 
 ---
 
@@ -222,3 +260,32 @@
 ## Notes
 
 _Espace pour noter sensations, ajustements, questions..._
+
+---
+
+## Baseline Strava (analyse 26 jan 2026)
+
+Basé sur 62 activités récupérées.
+
+### Historique clé
+| Stat | Valeur | Date |
+|------|--------|------|
+| Record distance | 77 km | 15 juil 2025 |
+| Record D+ | 559 m (31 km) | 3 août 2025 |
+| Meilleur enchaînement | 5 jours, ~380 km | Août 2025 (Canal 2 Mers) |
+| Dernier arrêt long | Oct-Déc 2025 (3 mois) | - |
+
+### Vitesses de référence
+- Sortie normale: 24-25 km/h
+- Endurance/loisir: 22-23 km/h
+- Cyclotourisme chargé: 15-19 km/h
+
+### Points forts identifiés
+- Capacité à enchaîner les jours (prouvé août 2025)
+- Tient bien 60-70 km sur le plat
+- Forme résiduelle correcte malgré l'arrêt
+
+### Points à travailler
+- Dénivelé: max 559m, la Creuse = 1000-1200m/jour
+- Reprendre progressivement après 3 mois d'arrêt
+- Expérience montagne quasi nulle
