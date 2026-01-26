@@ -12,6 +12,7 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 - `suivi.md` - Check-list globale des 17 semaines
 - `seances/` - Dossier avec le suivi détaillé
 - `fiches/` - Guides techniques (sorties, nutrition, Lafay, peloton)
+- `data/seances.csv` - Données séances pour export web
 - `bin/meteo` - Script météo 7 jours avec indicateurs vélo
 - `bin/strava` - Récupérer les dernières activités Strava
 - `bin/strava-auth` - Flow OAuth pour générer le refresh_token
@@ -79,11 +80,16 @@ Requiert: `jq`
 
 **Usage:**
 ```bash
-./bin/strava      # 5 dernières activités
-./bin/strava 10   # 10 dernières
+./bin/strava              # 5 dernières activités
+./bin/strava list 10      # 10 dernières
+./bin/strava last         # JSON dernière activité
+./bin/strava get <id>     # JSON activité spécifique
+./bin/strava seance       # Données formatées pour /seance
+./bin/strava seance <id>  # Idem pour une activité spécifique
+./bin/strava csv <id> <sem> <type> <rpe> <sens>  # Ligne CSV
 ```
 
-Requiert: `curl`, `jq`, `python3`
+Requiert: `curl`, `jq`, `python3` (auth uniquement)
 
 ### Liens Google Calendar
 Format pour créer un événement:

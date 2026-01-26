@@ -31,13 +31,99 @@ if [[ -z "$ACCESS_TOKEN" ]] || [[ "$ACCESS_TOKEN" == "null" ]]; then
   exit 1
 fi
 
-LIMIT="${1:-5}"
+MODE="${1:-list}"
 
-curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=$LIMIT" \
-  -H "Authorization: Bearer $ACCESS_TOKEN" | jq -r '
-  .[] |
-  "📅 \(.start_date_local | split("T")[0]) | \(.name)
-   Distance: \((.distance / 1000) | round)km | Dénivelé: \(.total_elevation_gain | round)m
-   Durée: \((.moving_time / 60) | round)min | Moyenne: \(((.average_speed * 3.6) * 10 | round) / 10)km/h
-   https://strava.com/activities/\(.id)
-"'
+case "$MODE" in
+  list)
+    LIMIT="${2:-5}"
+    curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=$LIMIT" \
+      -H "Authorization: Bearer $ACCESS_TOKEN" | jq -r '
+      .[] |
+      "📅 \(.start_date_local | split("T")[0]) | \(.name)
+       Distance: \((.distance / 1000) | round)km | Dénivelé: \(.total_elevation_gain | round)m
+       Durée: \((.moving_time / 60) | round)min | Moyenne: \(((.average_speed * 3.6) * 10 | round) / 10)km/h
+       https://strava.com/activities/\(.id)
+    "'
+    ;;
+  last)
+    curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=1" \
+      -H "Authorization: Bearer $ACCESS_TOKEN" | jq '.[0]'
+    ;;
+  get)
+    ACTIVITY_ID="$2"
+    curl -s "https://www.strava.com/api/v3/activities/$ACTIVITY_ID" \
+      -H "Authorization: Bearer $ACCESS_TOKEN"
+    ;;
+  seance)
+    ACTIVITY_ID="${2:-}"
+    if [[ -z "$ACTIVITY_ID" ]]; then
+      ACTIVITY_ID=$(curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=1" \
+        -H "Authorization: Bearer $ACCESS_TOKEN" | jq -r '.[0].id')
+    fi
+    DATA=$(curl -s "https://www.strava.com/api/v3/activities/$ACTIVITY_ID" \
+      -H "Authorization: Bearer $ACCESS_TOKEN")
+
+    echo "$DATA" | jq -r '
+      "## Données Strava",
+      "",
+      "- **Distance**: \((.distance / 1000 * 10 | round) / 10) km",
+      "- **D+**: \(.total_elevation_gain | round) m",
+      "- **Durée**: \((.moving_time / 60) | round) min",
+      "- **Vitesse moy**: \(((.average_speed * 3.6) * 10 | round) / 10) km/h",
+      "- **Vitesse max**: \(((.max_speed * 3.6) * 10 | round) / 10) km/h",
+      (if .average_watts then "- **Puissance moy**: \(.average_watts | round) W" else empty end),
+      (if .calories then "- **Calories**: \(.calories | round)" else empty end),
+      (if .suffer_score then "- **Effort relatif**: \(.suffer_score | round)" else empty end),
+      (if .pr_count and .pr_count > 0 then "- **PRs**: \(.pr_count)" else empty end),
+      (if .has_heartrate then "- **FC moy**: \(.average_heartrate | round) bpm" else empty end),
+      (if .has_heartrate then "- **FC max**: \(.max_heartrate | round) bpm" else empty end),
+      "- **Strava**: https://www.strava.com/activities/\(.id)",
+      "",
+      "<!-- date: \(.start_date_local | split("T")[0]) -->",
+      "<!-- name: \(.name) -->"
+    '
+    ;;
+  csv)
+    ACTIVITY_ID="${2:-}"
+    SEMAINE="${3:-}"
+    TYPE="${4:-}"
+    RPE="${5:-}"
+    SENSATION="${6:-}"
+
+    if [[ -z "$ACTIVITY_ID" ]]; then
+      ACTIVITY_ID=$(curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=1" \
+        -H "Authorization: Bearer $ACCESS_TOKEN" | jq -r '.[0].id')
+    fi
+
+    DATA=$(curl -s "https://www.strava.com/api/v3/activities/$ACTIVITY_ID" \
+      -H "Authorization: Bearer $ACCESS_TOKEN")
+
+    echo "$DATA" | jq -r --arg sem "$SEMAINE" --arg type "$TYPE" --arg rpe "$RPE" --arg sens "$SENSATION" '
+      [
+        (.start_date_local | split("T")[0]),
+        $sem,
+        $type,
+        .name,
+        ((.distance / 1000 * 10 | round) / 10),
+        (.total_elevation_gain | round),
+        ((.moving_time / 60) | round),
+        ((.average_speed * 3.6 * 10 | round) / 10),
+        ((.max_speed * 3.6 * 10 | round) / 10),
+        (.average_watts // "" | if . == "" then "" else round end),
+        (.calories // "" | if . == "" then "" else round end),
+        (.suffer_score // "" | if . == "" then "" else round end),
+        (.pr_count // 0),
+        (.average_heartrate // "" | if . == "" then "" else round end),
+        (.max_heartrate // "" | if . == "" then "" else round end),
+        $rpe,
+        $sens,
+        .id,
+        .embed_token
+      ] | @csv
+    '
+    ;;
+  *)
+    echo "Usage: $0 [list [n] | last | get <id> | seance [id] | csv <id> <semaine> <type> <rpe> <sensation>]" >&2
+    exit 1
+    ;;
+esac

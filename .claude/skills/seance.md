@@ -10,94 +10,95 @@ Enregistre les résultats d'une séance d'entraînement vélo ou renforcement.
 
 ## Instructions
 
-1. Demander le type de séance:
-   - A (endurance)
-   - B (force)
-   - C (longue)
-   - Renfo (renforcement)
-
-2. Demander la date (proposer aujourd'hui par défaut)
-
-3. Calculer la semaine correspondante (semaine 1 = 26 jan - 1 fév)
-
-4. Poser les questions selon le type:
-
 ### Pour séances vélo (A, B, C)
 
-**Avant:**
-- Forme au réveil (1-5)
-- Fatigue jambes (1-5)
-
-**Pendant:**
-- Durée réelle
-- Distance
-- D+ (si connu)
-- Lien Strava (optionnel)
-- RPE global (1-10)
-- Nutrition: bidons bus, solide mangé
-- Fringale? Coup de chaud/froid?
-
-**Si séance B (force):**
-- Nb de blocs faits
-- Cadence tenue?
-
-**Après:**
-- Sensation générale: cramé / fatigué / ok / frais
-- Douleurs éventuelles
+1. Lancer `./bin/strava seance` pour récupérer la dernière activité
+2. Afficher les données récupérées et demander confirmation
+3. Demander le type de séance (A/B/C) si pas évident du nom
+4. Poser uniquement les questions subjectives:
+   - RPE global (1-10) - ressenti d'effort
+   - Sensation après: cramé / fatigué / ok / frais
+   - Nutrition: bidons bus, solide mangé, fringale?
+   - Douleurs éventuelles
+   - Notes libres (optionnel)
+5. Si séance B (force): nb de blocs faits, cadence tenue?
+6. Calculer la semaine (semaine 1 = 26 jan)
+7. Créer le fichier `seances/semaine-XX/YYYY-MM-DD-type.md`
+8. Ajouter au CSV: `./bin/strava csv <id> <semaine> <type> <rpe> <sensation> >> data/seances.csv`
+9. Cocher la séance dans `seances/semaine-XX/bilan.md`
 
 ### Pour Renfo
 
-- Exercices faits (squats, fentes, gainage...)
-- Durée
-- Sensation: tonique / neutre / rincé
+1. Demander:
+   - Exercices faits (squats, fentes, gainage...)
+   - Durée
+   - Sensation: tonique / neutre / rincé
+2. Créer le fichier et cocher le bilan
 
-5. Créer le fichier dans `seances/semaine-XX/YYYY-MM-DD-type.md`
-
-6. Mettre à jour la case correspondante dans `seances/semaine-XX/bilan.md` (cocher la séance)
-
-## Format du fichier
+## Format du fichier vélo
 
 ```markdown
 # Séance du JJ/MM
 
 ## Infos
-- **Type**: X
+
+- **Type**: A (endurance) / B (force) / C (longue)
 - **Semaine**: X/17
-- **Durée**: Xh
+
+## Données Strava
+
 - **Distance**: X km
 - **D+**: X m
+- **Durée**: X min
+- **Vitesse moy**: X km/h
+- **Vitesse max**: X km/h
+- **Puissance moy**: X W (si dispo)
+- **Calories**: X
+- **Effort relatif**: X
+- **PRs**: X (si > 0)
+- **FC moy/max**: X bpm (si dispo)
+- **Strava**: https://...
 
 ## Ressenti
-- **Forme avant**: X/5
+
 - **RPE**: X/10
 - **Sensation après**: X
 
 ## Nutrition
-- Bidons: X
-- Solide: X
-- Fringale: non
+
+- **Bidons**: X
+- **Solide**: X
+- **Fringale**: non
 
 ## Notes
-[notes libres si mentionnées]
+
+[notes libres]
 ```
 
 ## Exemple d'interaction
 
 ```
 User: /seance
-Claude: Quel type de séance?
-- A (endurance)
-- B (force)
-- C (longue)
-- Renfo
+Claude: [lance ./bin/strava seance]
+Claude: Dernière activité: "Sortie endurance" du 26/01
+- 25 km, 52 m D+, 62 min
+- 24.2 km/h moy, 92 W
+- 3 PRs
 
-User: B
-Claude: Date? (défaut: aujourd'hui 26/01)
-User: aujourd'hui
-Claude: Durée réelle?
-User: 1h10
-Claude: Distance?
-User: 28km
-...
-Claude: Séance enregistrée dans seances/semaine-01/2026-01-26-force.md
+C'est bien celle-ci? Type A (endurance)?
+
+User: oui
+Claude: RPE (1-10)?
+User: 3
+Claude: Sensation après? (cramé/fatigué/ok/frais)
+User: frais
+Claude: Nutrition - bidons bus?
+User: 2/3
+Claude: Solide mangé?
+User: 1 barre
+Claude: Fringale?
+User: non
+Claude: Notes à ajouter?
+User: bonne reprise
+Claude: ✓ Séance enregistrée: seances/semaine-01/2026-01-26-endurance.md
 ```
