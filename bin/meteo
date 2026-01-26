@@ -1,0 +1,58 @@
+#!/bin/bash
+
+LIEU="${1:-Bordeaux}"
+
+get_coords() {
+  curl -s "https://geocoding-api.open-meteo.com/v1/search?name=$1&count=1&language=fr" | jq -r '.results[0] | "\(.latitude) \(.longitude) \(.name)"'
+}
+
+read -r LAT LON NOM <<< "$(get_coords "$LIEU")"
+
+if [ -z "$LAT" ] || [ "$LAT" = "null" ]; then
+  echo "Lieu non trouvé: $LIEU"
+  exit 1
+fi
+
+METEO=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$LAT&longitude=$LON&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,weather_code&daily=sunrise,sunset&timezone=auto")
+
+echo "Météo horaire 7 jours - $NOM"
+echo "===================================="
+echo ""
+
+echo "$METEO" | jq -r '
+  .hourly as $h |
+  .daily as $d |
+  ($h.time | length) as $len |
+  [range(0; $len)] |
+  group_by(. / 24 | floor) |
+  .[] |
+  .[0] as $first |
+  ($h.time[$first] | split("T")[0]) as $date |
+  (($first / 24) | floor) as $day_idx |
+  $d.sunrise[$day_idx] as $sunrise |
+  $d.sunset[$day_idx] as $sunset |
+  "\n📅 \($date) (lever: \($sunrise | split("T")[1]) / coucher: \($sunset | split("T")[1]))",
+  "────────────────────────────────────────────────────",
+  "Heure  Temp   Pluie%  Préc.   Vent    Conditions",
+  "────────────────────────────────────────────────────",
+  ([.[] | select(. % 24 >= 7 and . % 24 <= 20)] | .[] |
+    $h.time[.] as $time |
+    ($time | split("T")[1] | split(":")[0]) as $hour |
+    $h.temperature_2m[.] as $temp |
+    $h.precipitation_probability[.] as $prob |
+    $h.precipitation[.] as $prec |
+    $h.wind_speed_10m[.] as $wind |
+    $h.weather_code[.] as $code |
+    (if $code == 0 then "☀️ Dégagé"
+     elif $code <= 3 then "⛅ Nuageux"
+     elif $code <= 48 then "🌫️ Brouillard"
+     elif $code <= 55 then "🌧️ Bruine"
+     elif $code <= 67 then "🌧️ Pluie"
+     elif $code <= 77 then "❄️ Neige"
+     elif $code <= 82 then "🌦️ Averses"
+     elif $code <= 86 then "🌨️ Neige"
+     else "⛈️ Orage" end) as $cond |
+    (if $prob >= 50 or $prec > 0.5 then "❌" elif $prob >= 30 then "🤷" else "✅" end) as $velo |
+    "\($hour)h    \($temp | tostring | .[:4] | if length < 4 then . + " " else . end)°  \($prob | tostring | if length < 2 then " " + . else . end)%     \($prec | tostring | .[:3])mm   \($wind | tostring | .[:2])km/h  \($cond) \($velo)"
+  )
+'

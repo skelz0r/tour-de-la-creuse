@@ -12,6 +12,7 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 - `suivi.md` - Check-list globale des 17 semaines
 - `seances/` - Dossier avec le suivi détaillé
 - `fiches/` - Guides techniques (sorties, nutrition, Lafay, peloton)
+- `bin/meteo` - Script météo 7 jours avec indicateurs vélo
 
 ## Commandes disponibles
 
@@ -20,6 +21,9 @@ Enregistrer une séance. Poser les questions du template et créer le fichier.
 
 ### `/bilan`
 Faire le bilan de la semaine. Calculer le taux de complétion et poser les questions d'auto-évaluation.
+
+### `/planification`
+Proposer des créneaux vélo pour la semaine selon la météo et le plan d'entraînement.
 
 ## Calcul des semaines
 
@@ -47,8 +51,27 @@ Course: semaine 17
 - Rappeler l'objectif: finir, pas performer
 - Français
 
+## Outils
+
+### Script météo (`bin/meteo`)
+```bash
+./bin/meteo [lieu]  # défaut: Bordeaux
+```
+Affiche météo horaire 7j (7h-20h) avec indicateurs:
+- ✅ = OK (pluie < 30%)
+- 🤷 = ça peut le faire (pluie 30-50%)
+- ❌ = mort (pluie > 50% ou préc. > 0.5mm)
+
+Requiert: `jq`
+
+### Liens Google Calendar
+Format pour créer un événement:
+```
+https://calendar.google.com/calendar/render?action=TEMPLATE&text=TITRE&dates=YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS&details=DESCRIPTION&location=LIEU
+```
+
 ## Quand l'utilisateur revient
 
 1. Calculer la semaine en cours
 2. Vérifier les séances enregistrées cette semaine
-3. Proposer soit `/seance` soit `/bilan` selon le contexte
+3. Proposer soit `/seance` soit `/bilan` soit `/planification` selon le contexte
