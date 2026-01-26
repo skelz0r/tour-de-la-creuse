@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour de la Creuse 2026</title>
+  <style>
+    :root {
+      --bg: #0f1a14;
+      --bg-card: #162019;
+      --accent: #b89b5e;
+      --accent-dim: #7a6d4a;
+      --green: #4a7c59;
+      --red: #8b5a5a;
+      --blue: #5a6a8b;
+      --text: #e8e4dc;
+      --text-muted: #8a9a8f;
+      --text-dim: #5a6a5f;
+      --border: rgba(184, 155, 94, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .totals {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .total-item {
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-card);
+      border-radius: 6px;
+    }
+
+    .total-value {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .total-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+    }
+
+    .week {
+      margin-bottom: 1rem;
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+    }
+
+    .week.has-seances {
+      border-color: var(--accent);
+    }
+
+    .week-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .week-number {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .week.empty .week-number {
+      color: var(--text-dim);
+    }
+
+    .week-phase {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.15rem 0.4rem;
+      border-radius: 2px;
+      background: var(--bg-card);
+      color: var(--text-muted);
+    }
+
+    .seance {
+      background: var(--bg-card);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .seance-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .seance-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .seance-name {
+      font-weight: 500;
+    }
+
+    .seance-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .type-badge {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.4rem;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    .type-A { background: var(--green); color: #fff; }
+    .type-B { background: var(--red); color: #fff; }
+    .type-C { background: var(--blue); color: #fff; }
+
+    .strava-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+
+    .strava-link:hover {
+      text-decoration: underline;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .stat {
+      font-size: 0.85rem;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+    }
+
+    .sensation {
+      font-size: 0.85rem;
+    }
+
+    .empty-text {
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .totals { grid-template-columns: repeat(2, 1fr); }
+      .stats { gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tour de la Creuse 2026</h1>
+      <p class="subtitle">22-24 mai 2026</p>
+    </header>
+
+    <div class="totals" id="totals"></div>
+    <div id="app"></div>
+  </div>
+
+  <script>
+    const PHASES = {
+      1: 'Base', 2: 'Base', 3: 'Base', 4: 'Base',
+      5: 'Force', 6: 'Force', 7: 'Force', 8: 'Force', 9: 'Force',
+      10: 'Spécifique', 11: 'Spécifique', 12: 'Spécifique', 13: 'Spécifique', 14: 'Spécifique',
+      15: 'Affûtage', 16: 'Affûtage', 17: 'Course'
+    };
+
+    const TYPE_NAMES = { A: 'Endurance', B: 'Force', C: 'Longue' };
+
+    async function loadCSV() {
+      const res = await fetch('../data/seances.csv');
+      const text = await res.text();
+      const lines = text.trim().split('\n');
+      const headers = parseCSVLine(lines[0]);
+      return lines.slice(1).map(line => {
+        const values = parseCSVLine(line);
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = values[i]);
+        return obj;
+      });
+    }
+
+    function parseCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        if (char === '"') inQuotes = !inQuotes;
+        else if (char === ',' && !inQuotes) { result.push(current); current = ''; }
+        else current += char;
+      }
+      result.push(current);
+      return result;
+    }
+
+    function groupByWeek(seances) {
+      const weeks = {};
+      for (let i = 1; i <= 17; i++) weeks[i] = [];
+      seances.forEach(s => {
+        const week = parseInt(s.semaine);
+        if (weeks[week]) weeks[week].push(s);
+      });
+      return weeks;
+    }
+
+    function formatDate(dateStr) {
+      const [y, m, d] = dateStr.split('-');
+      return `${d}/${m}`;
+    }
+
+    function renderTotals(seances) {
+      const totalKm = seances.reduce((sum, s) => sum + parseFloat(s.distance_km || 0), 0);
+      const totalD = seances.reduce((sum, s) => sum + parseFloat(s.denivele_m || 0), 0);
+      const totalMin = seances.reduce((sum, s) => sum + parseFloat(s.duree_min || 0), 0);
+      const hours = Math.floor(totalMin / 60);
+      const mins = Math.round(totalMin % 60);
+
+      document.getElementById('totals').innerHTML = `
+        <div class="total-item">
+          <div class="total-value">${seances.length}</div>
+          <div class="total-label">Séances</div>
+        </div>
+        <div class="total-item">
+          <div class="total-value">${totalKm.toFixed(0)}</div>
+          <div class="total-label">km</div>
+        </div>
+        <div class="total-item">
+          <div class="total-value">${totalD.toFixed(0)}</div>
+          <div class="total-label">m D+</div>
+        </div>
+        <div class="total-item">
+          <div class="total-value">${hours}h${String(mins).padStart(2, '0')}</div>
+          <div class="total-label">Temps</div>
+        </div>
+      `;
+    }
+
+    function getSensationEmoji(sensation) {
+      const emojis = { frais: '😎', ok: '👍', fatigué: '😮‍💨', cramé: '🥵' };
+      return emojis[sensation] || '';
+    }
+
+    function renderSeance(s, index) {
+      return `
+        <div class="seance">
+          <div class="seance-header">
+            <div class="seance-title">
+              <span class="type-badge type-${s.type}">${TYPE_NAMES[s.type] || s.type}</span>
+              <span class="seance-name">${s.nom}</span>
+              <span class="seance-date">${formatDate(s.date)}</span>
+            </div>
+            <a href="https://www.strava.com/activities/${s.strava_id}" target="_blank" class="strava-link">Strava</a>
+          </div>
+          <div class="stats">
+            <span class="stat"><span class="stat-value">${s.distance_km}</span> <span class="stat-label">km</span></span>
+            <span class="stat"><span class="stat-value">${s.denivele_m}</span> <span class="stat-label">m D+</span></span>
+            <span class="stat"><span class="stat-value">${s.duree_min}</span> <span class="stat-label">min</span></span>
+            <span class="stat"><span class="stat-value">${s.vitesse_moy}</span> <span class="stat-label">km/h</span></span>
+            ${s.puissance_moy ? `<span class="stat"><span class="stat-value">${s.puissance_moy}</span> <span class="stat-label">W</span></span>` : ''}
+            ${s.prs && s.prs !== '0' ? `<span class="stat"><span class="stat-value">${s.prs}</span> <span class="stat-label">PRs</span></span>` : ''}
+            ${s.sensation ? `<span class="sensation">${getSensationEmoji(s.sensation)} ${s.sensation}</span>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderWeek(weekNum, seances) {
+      const hasSeances = seances.length > 0;
+      return `
+        <div class="week ${hasSeances ? 'has-seances' : 'empty'}">
+          <div class="week-header">
+            <span class="week-number">S${weekNum}</span>
+            <span class="week-phase">${PHASES[weekNum]}</span>
+          </div>
+          ${hasSeances
+            ? seances.map((s, i) => renderSeance(s, `${weekNum}-${i}`)).join('')
+            : '<span class="empty-text">—</span>'
+          }
+        </div>
+      `;
+    }
+
+    async function init() {
+      const seances = await loadCSV();
+      const weeks = groupByWeek(seances);
+      renderTotals(seances);
+      document.getElementById('app').innerHTML = Object.entries(weeks)
+        .map(([week, seances]) => renderWeek(parseInt(week), seances))
+        .join('');
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -14,18 +14,39 @@
 tour-de-la-creuse/
 ├── bilan.md          # Synthèse profil + stratégie
 ├── suivi.md          # Check-list 17 semaines
-├── questionnaire.md  # Échanges initiaux
-├── summary.md        # Infos course
-├── seances/
-│   ├── README.md
-│   ├── _template_seance.md
-│   ├── _template_bilan_semaine.md
-│   └── semaine-01/ à semaine-17/
-└── .claude/
-    └── skills/
-        ├── seance.md   # /seance
-        └── bilan.md    # /bilan
+├── seances/          # Suivi détaillé par semaine
+├── data/
+│   └── seances.csv   # Données pour la webapp
+├── webapp/           # Dashboard de suivi
+├── bin/
+│   ├── meteo         # Météo 7j avec indicateurs vélo
+│   ├── strava        # Récupérer activités Strava
+│   ├── strava-auth   # Auth OAuth Strava
+│   └── webapp        # Lancer le dashboard local
+└── .claude/skills/   # Skills Claude (/seance, /bilan, /planification)
 ```
+
+## Webapp
+
+Dashboard local pour visualiser la progression.
+
+```bash
+./bin/webapp
+```
+
+Affiche : totaux (séances, km, D+, temps), timeline par semaine, stats par séance avec lien Strava.
+
+## Intégration Strava
+
+Les séances vélo sont automatiquement importées depuis Strava.
+
+```bash
+./bin/strava              # Liste les 5 dernières activités
+./bin/strava seance       # Données formatées pour /seance
+./bin/strava csv ...      # Export CSV pour la webapp
+```
+
+Setup initial : voir `CLAUDE.md` section Outils.
 
 ## Utilisation avec Claude
 

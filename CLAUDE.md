@@ -13,6 +13,7 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 - `seances/` - Dossier avec le suivi détaillé
 - `fiches/` - Guides techniques (sorties, nutrition, Lafay, peloton)
 - `data/seances.csv` - Données séances pour export web
+- `webapp/` - Dashboard de suivi (timeline, stats, liens Strava)
 - `bin/meteo` - Script météo 7 jours avec indicateurs vélo
 - `bin/strava` - Récupérer les dernières activités Strava
 - `bin/strava-auth` - Flow OAuth pour générer le refresh_token
@@ -90,6 +91,13 @@ Requiert: `jq`
 ```
 
 Requiert: `curl`, `jq`, `python3` (auth uniquement)
+
+### Webapp (`bin/webapp`)
+```bash
+./bin/webapp        # Lance sur port 8080
+./bin/webapp 3000   # Port custom
+```
+Ouvre automatiquement le navigateur.
 
 ### Liens Google Calendar
 Format pour créer un événement:
