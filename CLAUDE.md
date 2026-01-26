@@ -18,6 +18,7 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 
 ### `/seance`
 Enregistrer une séance. Poser les questions du template et créer le fichier.
+Pour les séances vélo: toujours demander le lien Strava.
 
 ### `/bilan`
 Faire le bilan de la semaine. Calculer le taux de complétion et poser les questions d'auto-évaluation.

@@ -3,7 +3,7 @@
 ## PHASE 1: BASE & RÉGULARITÉ (Février)
 
 ### Semaine 1 (26 jan - 1 fév)
-- [ ] Sortie A: Endurance 1h15-1h30
+- [x] Sortie A: Endurance 1h15-1h30
 - [ ] Sortie B: Force 1h (4x5min gros braquet)
 - [ ] Sortie C: Longue 2h (WE)
 - [ ] Renfo 1: Lafay 15-20min
