@@ -7,9 +7,11 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 
 ## Fichiers importants
 
+- `stats.md` - **Stats Strava de référence** (vitesses, records, estimations)
 - `bilan.md` - Synthèse du profil et de la stratégie
 - `suivi.md` - Check-list globale des 17 semaines
 - `seances/` - Dossier avec le suivi détaillé
+- `fiches/` - Guides techniques (sorties, nutrition, Lafay, peloton)
 
 ## Commandes disponibles
 
@@ -30,6 +32,13 @@ Phase 3 (Spécifique): semaines 10-14
 Phase 4 (Affûtage): semaines 15-16
 Course: semaine 17
 ```
+
+## Stats clés (voir stats.md pour détails)
+
+- Moyenne générale: ~23 km/h
+- Endurance: 20-22 km/h → 1h15 = ~25 km, 1h30 = ~30 km
+- Sortie la plus longue: 76.5 km
+- Point de départ: très bas (quasi rien depuis octobre 2025)
 
 ## Ton
 
