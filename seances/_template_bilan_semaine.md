@@ -24,6 +24,26 @@
 - **Km**:
 - **D+**:
 
+## Bilan Renfo
+
+### Séances faites
+- Séance A: oui/non
+- Séance B: oui/non
+
+### Niveaux actuels
+| Exercice | Niveau (1-4) | Ressenti |
+|----------|--------------|----------|
+| Tractions | | trop facile / ok / dur |
+| Pompes | | trop facile / ok / dur |
+| Rowing | | trop facile / ok / dur |
+| Squats | | trop facile / ok / dur |
+| Fentes | | trop facile / ok / dur |
+| Gainage | | trop facile / ok / dur |
+
+### Adaptations semaine prochaine
+_Monter/descendre quel exercice ? Changer la fréquence ?_
+
+
 ## Auto-évaluation
 
 ### Régularité (1-5):
