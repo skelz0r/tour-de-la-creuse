@@ -56,6 +56,7 @@
 - [ ] Sortie C: Longue 3h-3h30 (WE)
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
+- **Option:** WE Pyrénées #1 (voir section délocalisées)
 
 ### Semaine 8 (16-22 mar)
 - [ ] Sortie A: Endurance 1h30
@@ -82,6 +83,7 @@
 - [ ] WE enchaînement: Sam 2h + Dim 3h
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
+- **Option:** Stage Oloron S10-11 (voir section délocalisées)
 
 ### Semaine 11 (6-12 avr)
 - [ ] Sortie A: Endurance 1h30
@@ -89,6 +91,7 @@
 - [ ] WE enchaînement: Sam 2h + Dim 3h30
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
+- **Option:** Stage Oloron S10-11 (voir section délocalisées)
 
 ### Semaine 12 (13-19 avr)
 - [ ] Sortie A: Endurance 1h30
@@ -104,6 +107,7 @@
 - [ ] WE enchaînement: Sam 2h30 + Dim 4h (sortie la plus longue)
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
+- **Option:** WE Pyrénées #2 (voir section délocalisées)
 
 ### Semaine 14 (27 avr - 3 mai)
 - [ ] Sortie A: Endurance 1h30
@@ -169,6 +173,49 @@
 - [ ] Hébergement réservé
 - [ ] Itinéraire aller/retour
 - [ ] Numéro d'urgence contact
+
+---
+
+## SORTIES DÉLOCALISÉES (Pyrénées)
+
+### WE #1 - Mi-mars (S7-8) - Test dénivelé
+- **Lieu:** Saint-Jean-Pied-de-Port ou autre
+- **Durée:** 2 jours
+- **Objectif:** Premier bloc montagne, tester gestion dénivelé
+- **Sorties:** 2 x 2h30-3h, dénivelé modéré
+- [ ] Réservé
+- [ ] Fait
+
+### Stage Oloron (S10-11) - Volume
+- **Lieu:** Oloron-Sainte-Marie (chez pote)
+- **Durée:** 3-4 jours
+- **Objectif:** Bloc volume, habituer aux cols
+- **Programme type:**
+  - J1: 2h endurance (découverte)
+  - J2: 3-4h sortie longue avec cols
+  - J3: 2h récup active
+  - J4: 2h30-3h consolidation (optionnel)
+- **Vigilance:** Rouler à ton allure, pas celle du pote. Max 1200m D+/jour.
+- [ ] Dates confirmées
+- [ ] Fait
+
+### WE #2 - Fin avril (S13-14) - Validation
+- **Lieu:** Saint-Jean-Pied-de-Port / Vallée d'Ossau / Vallée d'Aspe
+- **Durée:** 2 jours
+- **Objectif:** Répétition générale, dernière grosse charge
+- **Sorties:** 60-70 km avec ~1000m D+
+- [ ] Réservé
+- [ ] Fait
+
+---
+
+## Idées parcours
+
+### Oloron / Béarn
+- **La Beuchigue** - https://www.strava.com/activities/11075513254
+  - 146 km / 1925m D+ (version complète - trop long pour toi)
+  - Départ Oloron-Sainte-Marie
+  - Demander au pote une version raccourcie ou juste une portion
 
 ---
 

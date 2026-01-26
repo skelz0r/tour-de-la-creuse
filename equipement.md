@@ -35,6 +35,13 @@ Inconvénients:
 - Chutes à l'arrêt au début
 - Marche difficile avec les chaussures
 
+### Option intermédiaire: pédales semi-automatiques
+
+Bon compromis entre plates et auto. Un côté plat (chaussures normales), un côté clip (chaussures auto).
+Permet de tester sans s'engager à 100%.
+
+[Pédales semi-auto Decathlon](https://www.decathlon.fr/p/pedales-plates-semi-automatique-pour-la-route-et-la-ville/_/R-p-343471)
+
 **Mon avis:** si tu veux les tester, achète-les maintenant (semaine 1-4) pour t'habituer. Sinon, pédales plates c'est très bien pour l'objectif "finir".
 
 ## Où acheter
