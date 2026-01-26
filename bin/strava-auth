@@ -12,7 +12,7 @@ if [[ -z "${strava_client_id:-}" ]] || [[ -z "${strava_client_secret:-}" ]]; the
 fi
 
 PORT=8888
-AUTH_URL="https://www.strava.com/oauth/authorize?client_id=$strava_client_id&redirect_uri=http://localhost:$PORT&response_type=code&scope=read,activity:read_all"
+AUTH_URL="https://www.strava.com/oauth/authorize?client_id=$strava_client_id&redirect_uri=http://localhost:$PORT&response_type=code&scope=read,activity:read_all&approval_prompt=force"
 
 echo "Démarrage du serveur sur localhost:$PORT..."
 echo "Ouverture du navigateur..."
