@@ -223,7 +223,7 @@
     const TYPE_NAMES = { A: 'Endurance', B: 'Force', C: 'Longue' };
 
     async function loadCSV() {
-      const res = await fetch('../data/seances.csv');
+      const res = await fetch('seances.csv');
       const text = await res.text();
       const lines = text.trim().split('\n');
       const headers = parseCSVLine(lines[0]);
