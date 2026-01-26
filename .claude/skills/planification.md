@@ -1,6 +1,6 @@
-# Skill: Planification vélo
+# Skill: Planification
 
-Proposer des créneaux vélo pour la semaine selon météo et plan d'entraînement.
+Proposer des créneaux pour la semaine: vélo (selon météo) et renfo (Lafay).
 
 ## Étapes
 
@@ -13,17 +13,30 @@ Proposer des créneaux vélo pour la semaine selon météo et plan d'entraîneme
 ## Format de sortie
 
 Tableau récapitulatif:
-| Jour | Séance | Durée | Créneau proposé | Météo |
+| Jour | Séance | Durée | Créneau proposé | Notes |
 |------|--------|-------|-----------------|-------|
 
 Puis pour chaque créneau validé par l'utilisateur, générer le lien Google Calendar:
 ```
-https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sortie%20vélo%20-%20TYPE&dates=YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS&details=Semaine%20X%20-%20DESCRIPTION&location=Bordeaux
+https://calendar.google.com/calendar/render?action=TEMPLATE&text=TITRE&dates=YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS&details=Semaine%20X%20-%20DESCRIPTION&location=Bordeaux
 ```
 
-## Règles
+## Règles vélo
 
 - Prioriser les créneaux ✅ sur les 🤷
 - Éviter les ❌
 - Sortie longue = week-end de préférence
-- Demander confirmation avant de générer les liens calendrier
+
+## Règles renfo (Lafay)
+
+- 2 séances par semaine, 15-20min
+- Pas le même jour qu'une sortie vélo intense (force ou longue)
+- Idéal: jours de repos vélo ou après sortie endurance
+- Pas de contrainte météo (intérieur)
+
+## Workflow
+
+1. Demander les disponibilités de la semaine
+2. Proposer un planning complet (vélo + renfo)
+3. Demander confirmation
+4. Générer les liens calendrier
