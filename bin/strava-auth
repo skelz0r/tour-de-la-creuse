@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ENV_FILE="$SCRIPT_DIR/../.env"
+
+source "$ENV_FILE"
+
+if [[ -z "${strava_client_id:-}" ]] || [[ -z "${strava_client_secret:-}" ]]; then
+  echo "Erreur: strava_client_id et strava_client_secret requis dans .env" >&2
+  exit 1
+fi
+
+PORT=8888
+AUTH_URL="https://www.strava.com/oauth/authorize?client_id=$strava_client_id&redirect_uri=http://localhost:$PORT&response_type=code&scope=read,activity:read_all"
+
+echo "Démarrage du serveur sur localhost:$PORT..."
+echo "Ouverture du navigateur..."
+
+open "$AUTH_URL" 2>/dev/null || xdg-open "$AUTH_URL" 2>/dev/null || echo "Ouvre: $AUTH_URL"
+
+CODE=$(python3 -c "
+import http.server
+import socketserver
+import urllib.parse
+
+class Handler(http.server.BaseHTTPRequestHandler):
+    def do_GET(self):
+        query = urllib.parse.urlparse(self.path).query
+        params = urllib.parse.parse_qs(query)
+        code = params.get('code', [''])[0]
+
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(b'<h1>OK ! Tu peux fermer cette page.</h1>')
+
+        print(code, flush=True)
+
+    def log_message(self, format, *args):
+        pass
+
+with socketserver.TCPServer(('', $PORT), Handler) as httpd:
+    httpd.handle_request()
+")
+
+if [[ -z "$CODE" ]]; then
+  echo "Erreur: pas de code reçu" >&2
+  exit 1
+fi
+
+echo "Code reçu, échange contre le token..."
+
+RESPONSE=$(curl -s -X POST "https://www.strava.com/oauth/token" \
+  -d "client_id=$strava_client_id" \
+  -d "client_secret=$strava_client_secret" \
+  -d "code=$CODE" \
+  -d "grant_type=authorization_code")
+
+REFRESH_TOKEN=$(echo "$RESPONSE" | jq -r '.refresh_token')
+
+if [[ -z "$REFRESH_TOKEN" ]] || [[ "$REFRESH_TOKEN" == "null" ]]; then
+  echo "Erreur: $(echo "$RESPONSE" | jq -r '.message // "réponse invalide"')" >&2
+  echo "$RESPONSE" | jq .
+  exit 1
+fi
+
+echo ""
+echo "Succès ! Mets à jour ton .env avec :"
+echo ""
+echo "strava_refresh_token=$REFRESH_TOKEN"

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ENV_FILE="$SCRIPT_DIR/../.env"
+
+if [[ ! -f "$ENV_FILE" ]]; then
+  echo "Erreur: .env non trouvé" >&2
+  exit 1
+fi
+
+source "$ENV_FILE"
+
+if [[ -z "${strava_client_id:-}" ]] || [[ -z "${strava_client_secret:-}" ]] || [[ -z "${strava_refresh_token:-}" ]]; then
+  echo "Erreur: variables Strava manquantes dans .env" >&2
+  exit 1
+fi
+
+get_access_token() {
+  curl -s -X POST "https://www.strava.com/oauth/token" \
+    -d "client_id=$strava_client_id" \
+    -d "client_secret=$strava_client_secret" \
+    -d "refresh_token=$strava_refresh_token" \
+    -d "grant_type=refresh_token" | jq -r '.access_token'
+}
+
+ACCESS_TOKEN=$(get_access_token)
+
+if [[ -z "$ACCESS_TOKEN" ]] || [[ "$ACCESS_TOKEN" == "null" ]]; then
+  echo "Erreur: impossible d'obtenir le token" >&2
+  exit 1
+fi
+
+LIMIT="${1:-5}"
+
+curl -s "https://www.strava.com/api/v3/athlete/activities?per_page=$LIMIT" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" | jq -r '
+  .[] |
+  "📅 \(.start_date_local | split("T")[0]) | \(.name)
+   Distance: \((.distance / 1000) | round)km | Dénivelé: \(.total_elevation_gain | round)m
+   Durée: \((.moving_time / 60) | round)min | Moyenne: \(((.average_speed * 3.6) * 10 | round) / 10)km/h
+   https://strava.com/activities/\(.id)
+"'

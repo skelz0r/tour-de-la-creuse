@@ -13,6 +13,9 @@ Cycliste: 36 ans, 67kg, basé à Bordeaux, objectif = finir le tour.
 - `seances/` - Dossier avec le suivi détaillé
 - `fiches/` - Guides techniques (sorties, nutrition, Lafay, peloton)
 - `bin/meteo` - Script météo 7 jours avec indicateurs vélo
+- `bin/strava` - Récupérer les dernières activités Strava
+- `bin/strava-auth` - Flow OAuth pour générer le refresh_token
+- `.env` - Credentials Strava (crypté via git-crypt)
 
 ## Commandes disponibles
 
@@ -64,6 +67,23 @@ Affiche météo horaire 7j (7h-20h) avec indicateurs:
 - ❌ = mort (pluie > 50% ou préc. > 0.5mm)
 
 Requiert: `jq`
+
+### Scripts Strava (`bin/strava`, `bin/strava-auth`)
+
+**Setup initial:**
+1. Créer une app sur https://www.strava.com/settings/api
+2. Mettre `localhost` comme Authorization Callback Domain
+3. Créer `.env` avec `strava_client_id` et `strava_client_secret`
+4. Lancer `./bin/strava-auth` pour générer le `strava_refresh_token`
+5. Ajouter le token au `.env`
+
+**Usage:**
+```bash
+./bin/strava      # 5 dernières activités
+./bin/strava 10   # 10 dernières
+```
+
+Requiert: `curl`, `jq`, `python3`
 
 ### Liens Google Calendar
 Format pour créer un événement:
