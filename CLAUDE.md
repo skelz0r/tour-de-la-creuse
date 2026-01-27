@@ -50,6 +50,17 @@ Course: semaine 17
 - Sortie la plus longue: 76.5 km
 - Point de départ: très bas (quasi rien depuis octobre 2025)
 
+## Parcours Bordeaux
+
+| Parcours | Distance | D+ | Durée estimée | Usage | Strava |
+|----------|----------|-----|---------------|-------|--------|
+| Côtes court | 31km | 256m | 1h20-1h30 | Force (B), semaine | [lien](https://www.strava.com/activities/10659306067) |
+| Côtes long | 55km | 402m | 2h-2h15 | Longue (C) avec D+ | [lien](https://www.strava.com/activities/14731308903) |
+
+Proposer selon forme et phase:
+- Phase 1-2: "Côtes court" pour habituer aux montées
+- Phase 2+: "Côtes long" quand 31km bien digéré
+
 ## Ton
 
 - Concis, direct

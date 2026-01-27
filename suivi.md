@@ -249,6 +249,16 @@
 
 ## Idées parcours
 
+### Bordeaux - Dénivelé
+
+- **31km / 256m D+** (8.3m/km) - Sortie Force (B)
+  - https://www.strava.com/activities/10659306067
+  - ~1h20-1h30, idéal travail en côte
+
+- **55km / 402m D+** (7.3m/km) - Sortie Longue (C)
+  - https://www.strava.com/activities/14731308903
+  - ~2h-2h15, bon volume + dénivelé
+
 ### Oloron / Béarn
 - **La Beuchigue** - https://www.strava.com/activities/11075513254
   - 146 km / 1925m D+ (version complète - trop long pour toi)
