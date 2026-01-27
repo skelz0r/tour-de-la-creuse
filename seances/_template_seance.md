@@ -37,8 +37,9 @@
 
 ### Si séance Force (B)
 
-- Nb de blocs faits:
-- Cadence tenue? (oui/non):
+- Nb de montées/blocs faits:
+- Braquet utilisé: plus petit / intermédiaire / gros
+- Montées gérables? (trop dur / ok / facile):
 - Sensation jambes: lourdes / ok / bien
 
 ## Après
