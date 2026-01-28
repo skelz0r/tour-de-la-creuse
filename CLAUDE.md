@@ -110,6 +110,31 @@ Requiert: `curl`, `jq`, `python3` (auth uniquement)
 ```
 Ouvre automatiquement le navigateur.
 
+**Structure:**
+- `webapp/index.html` - Single page app (HTML + JS inline)
+- `data/seances.csv` - Données source
+- `_site/` - Build généré (gitignored)
+
+**Déploiement:**
+- GitHub Pages via `.github/workflows/deploy.yml`
+- Push sur main → build automatique → deploy
+- Le workflow copie `index.html` + `seances.csv` dans `_site/`
+
+**Format CSV (`data/seances.csv`):**
+```
+date,semaine,type,nom,distance_km,denivele_m,duree_min,vitesse_moy,vitesse_max,puissance_moy,calories,effort_relatif,prs,fc_moy,fc_max,rpe,sensation,strava_id,embed_token
+```
+
+**Affichage par séance:**
+- Badge type (A/B/C) avec couleur
+- Nom, date
+- Stats: distance, D+, durée (min), vitesse moy, puissance, PRs
+- Lien Strava
+- Sensation avec emoji
+
+**Totaux en haut:**
+- Nb séances, km total, D+ total, temps total
+
 ### Liens Google Calendar
 Format pour créer un événement:
 ```
