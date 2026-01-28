@@ -1,6 +1,12 @@
 #!/bin/bash
 
 LIEU="${1:-Bordeaux}"
+JOURS="${2:-7}"
+
+if [ "$JOURS" -lt 1 ] || [ "$JOURS" -gt 7 ]; then
+  echo "Nombre de jours doit être entre 1 et 7"
+  exit 1
+fi
 
 get_coords() {
   curl -s "https://geocoding-api.open-meteo.com/v1/search?name=$1&count=1&language=fr" | jq -r '.results[0] | "\(.latitude) \(.longitude) \(.name)"'
@@ -15,23 +21,28 @@ fi
 
 METEO=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$LAT&longitude=$LON&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,weather_code&daily=sunrise,sunset&timezone=auto")
 
-echo "Météo horaire 7 jours - $NOM"
+echo "Météo $JOURS jour(s) - $NOM"
 echo "===================================="
 echo ""
 
-echo "$METEO" | jq -r '
+DOW=$(date +%u)
+
+echo "$METEO" | jq -r --argjson jours "$JOURS" --argjson dow "$DOW" '
+  ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"] as $jours_fr |
   .hourly as $h |
   .daily as $d |
   ($h.time | length) as $len |
   [range(0; $len)] |
   group_by(. / 24 | floor) |
+  .[:$jours] |
   .[] |
   .[0] as $first |
   ($h.time[$first] | split("T")[0]) as $date |
   (($first / 24) | floor) as $day_idx |
+  $jours_fr[(($dow - 1 + $day_idx) % 7)] as $jour |
   $d.sunrise[$day_idx] as $sunrise |
   $d.sunset[$day_idx] as $sunset |
-  "\n📅 \($date) (lever: \($sunrise | split("T")[1]) / coucher: \($sunset | split("T")[1]))",
+  "\n📅 \($jour). \($date) (lever: \($sunrise | split("T")[1]) / coucher: \($sunset | split("T")[1]))",
   "────────────────────────────────────────────────────",
   "Heure  Temp   Pluie%  Préc.   Vent    Conditions",
   "────────────────────────────────────────────────────",
