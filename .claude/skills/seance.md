@@ -14,7 +14,12 @@ Enregistre les résultats d'une séance d'entraînement vélo ou renforcement.
 
 1. Lancer `./bin/strava seance` pour récupérer la dernière activité
 2. Afficher les données récupérées et demander confirmation
-3. Demander le type de séance (A/B/C) si pas évident du nom
+3. Déduire le type automatiquement selon ces règles:
+   - ~31km + ~250m D+ → "Côtes court" → B (force)
+   - ~55km + ~400m D+ → "Côtes long" → C (longue)
+   - >60km ou >3h → C (longue)
+   - <150m D+ sur <50km → A (endurance)
+   - En cas de doute, demander confirmation
 4. Poser uniquement les questions subjectives:
    - RPE global (1-10) - ressenti d'effort
    - Sensation après: cramé / fatigué / ok / frais
