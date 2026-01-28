@@ -72,8 +72,9 @@ Proposer selon forme et phase:
 
 ### Script météo (`bin/meteo`)
 ```bash
-./bin/meteo [lieu] [jours]  # défaut: Bordeaux, 7 jours
-./bin/meteo Bordeaux 3      # 3 prochains jours
+./bin/meteo [jours] [lieu]  # défaut: 7, Bordeaux
+./bin/meteo 3               # 3 prochains jours à Bordeaux
+./bin/meteo 5 Paris         # 5 jours à Paris
 ```
 Affiche météo horaire (7h-20h) avec jour de la semaine et indicateurs:
 - ✅ = OK (pluie < 30%)

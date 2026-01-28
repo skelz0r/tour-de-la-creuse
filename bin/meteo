@@ -1,7 +1,7 @@
 #!/bin/bash
 
-LIEU="${1:-Bordeaux}"
-JOURS="${2:-7}"
+JOURS="${1:-7}"
+LIEU="${2:-Bordeaux}"
 
 if [ "$JOURS" -lt 1 ] || [ "$JOURS" -gt 7 ]; then
   echo "Nombre de jours doit être entre 1 et 7"
