@@ -70,20 +70,20 @@
 - [ ] Renfo 2: Lafay
 - **Option:** WE Pyrénées #1 (voir section délocalisées) - FORTEMENT RECOMMANDÉ
 
-### Semaine 8 (16-22 mar)
+### Semaine 8 (16-22 mar) - Charger avant off
 - [ ] Sortie A: Endurance 1h30
 - [ ] Sortie B: Force 1h15
-- [ ] Sortie C: Longue 3h30-4h (WE) - selon sensations
+- [ ] Sortie C: Longue 3h30-4h (WE) - bien charger avant Cracovie
 - [ ] Renfo 1: Lafay
 - [ ] Renfo 2: Lafay
 
-### Semaine 9 (23-29 mar)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] Sortie C: Longue 3h30 (WE) - tester nutrition tour
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+### Semaine 9 (23-29 mar) - OFF / Cracovie
+- [ ] Course 1: 30-45min endurance
+- [ ] Course 2: 30-45min endurance
+- [ ] Course 3: 30-45min endurance (optionnel)
 - [ ] **BILAN PHASE 2** (voir questions ci-dessous)
+
+> Semaine off vélo (voyage Cracovie). Cross-training course à pied pour maintenir le cardio. Pas d'excès, allure facile.
 
 #### Questions bilan Phase 2
 1. Tu tiens 3h30 sans problème? Sensation en fin de sortie?
