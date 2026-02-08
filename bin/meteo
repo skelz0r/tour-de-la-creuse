@@ -3,8 +3,8 @@
 JOURS="${1:-7}"
 LIEU="${2:-Bordeaux}"
 
-if [ "$JOURS" -lt 1 ] || [ "$JOURS" -gt 7 ]; then
-  echo "Nombre de jours doit être entre 1 et 7"
+if [ "$JOURS" -lt 1 ] || [ "$JOURS" -gt 14 ]; then
+  echo "Nombre de jours doit être entre 1 et 14"
   exit 1
 fi
 
@@ -19,7 +19,7 @@ if [ -z "$LAT" ] || [ "$LAT" = "null" ]; then
   exit 1
 fi
 
-METEO=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$LAT&longitude=$LON&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,weather_code&daily=sunrise,sunset&timezone=auto")
+METEO=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$LAT&longitude=$LON&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,weather_code&daily=sunrise,sunset&timezone=auto&forecast_days=$JOURS")
 
 echo "Météo $JOURS jour(s) - $NOM"
 echo "===================================="
