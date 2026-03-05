@@ -216,17 +216,20 @@
 
 ## SORTIES DÉLOCALISÉES (Pyrénées)
 
-### WE #1 - Mi-mars (S7-8) - Test dénivelé
-- **Lieu:** Saint-Jean-Pied-de-Port ou autre
-- **Durée:** 2 jours
-- **Objectif:** Premier bloc montagne, tester gestion dénivelé
-- **Sorties:** 2 x 2h30-3h, dénivelé modéré
-- [ ] Réservé
+### Stage #1 - Mars (S7-8) - Test dénivelé
+- **Lieu:** Pyrénées (à confirmer)
+- **Dates:** 14-19 mars (S7-8)
+- **Durée:** 4-6 jours
+- **Objectif:** Premier contact montagne, tester gestion dénivelé
+- **Sorties:** 3-4 sorties, dénivelé modéré
+- **Vigilance:** Cracovie S9 juste après, ne pas trop charger
+- [ ] Lieu confirmé
 - [ ] Fait
 
-### Stage Oloron (S10-11) - Volume
-- **Lieu:** Oloron-Sainte-Marie (chez pote)
-- **Durée:** 3-4 jours
+### Stage #2 - Avril (S10) - Volume
+- **Lieu:** Pyrénées (à confirmer, possiblement même endroit que mars)
+- **Dates:** 7-10 avril (S10)
+- **Durée:** 4 jours
 - **Objectif:** Bloc volume, habituer aux cols
 - **Programme type:**
   - J1: 2h endurance (découverte)
@@ -234,15 +237,7 @@
   - J3: 2h récup active
   - J4: 2h30-3h consolidation (optionnel)
 - **Vigilance:** Rouler à ton allure, pas celle du pote. Max 1200m D+/jour.
-- [ ] Dates confirmées
-- [ ] Fait
-
-### WE #2 - Fin avril (S13-14) - Validation
-- **Lieu:** Saint-Jean-Pied-de-Port / Vallée d'Ossau / Vallée d'Aspe
-- **Durée:** 2 jours
-- **Objectif:** Répétition générale, dernière grosse charge
-- **Sorties:** 60-70 km avec ~1000m D+
-- [ ] Réservé
+- [ ] Lieu confirmé
 - [ ] Fait
 
 ---
