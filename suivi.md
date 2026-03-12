@@ -216,14 +216,21 @@
 
 ## SORTIES DÉLOCALISÉES (Pyrénées)
 
-### Stage #1 - Mars (S7-8) - Test dénivelé
-- **Lieu:** Pyrénées (à confirmer)
-- **Dates:** 14-19 mars (S7-8)
-- **Durée:** 4-6 jours
-- **Objectif:** Premier contact montagne, tester gestion dénivelé
-- **Sorties:** 3-4 sorties, dénivelé modéré
-- **Vigilance:** Cracovie S9 juste après, ne pas trop charger
-- [ ] Lieu confirmé
+### Stage #1 - Oloron (S8) - Test dénivelé
+- **Lieu:** Oloron-Sainte-Marie
+- **Dates:** 16-17 mars (lun-mar)
+- **Durée:** 2 jours
+- **Objectif:** Premier contact montagne, tester gestion dénivelé sur 2 jours
+- **J1 (lun 16) - JX:** 69.5 km / 842m D+ - 2 grosses montées
+  - https://ridewithgps.com/routes/54160848
+- **J2 (mar 17) - JY:** ~69 km / 1050m D+ - 2 grosses montées
+  - https://ridewithgps.com/routes/54160862
+- **Stratégie:**
+  - Pacing conservateur sur les montées (petit plateau dès le départ)
+  - Nutrition : petit dej costaud, barre toutes les 30-40 min
+  - J1 = mise en jambes, J2 = vrai test avec fatigue cumulée
+- **Vigilance:** Cracovie S9 juste après, ne pas se cramer
+- [x] Lieu confirmé
 - [ ] Fait
 
 ### Stage #2 - Avril (S10) - Volume
@@ -255,10 +262,12 @@
   - ~2h-2h15, bon volume + dénivelé
 
 ### Oloron / Béarn
-- **La Beuchigue** - https://www.strava.com/activities/11075513254
-  - 146 km / 1925m D+ (version complète - trop long pour toi)
+- **JX** - https://ridewithgps.com/routes/54160848
+  - 69.5 km / 842m D+ - 2 grosses montées
   - Départ Oloron-Sainte-Marie
-  - Demander au pote une version raccourcie ou juste une portion
+- **JY** - https://ridewithgps.com/routes/54160862
+  - ~69 km / 1050m D+ - 2 grosses montées
+  - Départ Oloron-Sainte-Marie
 
 ---
 
