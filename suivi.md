@@ -3,180 +3,102 @@
 ## PHASE 1: BASE & RÉGULARITÉ (Février)
 
 ### Semaine 1 (26 jan - 1 fév)
-- [x] Sortie A: Endurance 1h15-1h30
-- [ ] Sortie B: Force 1h (4x5min gros braquet)
-- [ ] Sortie C: Longue 2h (WE)
-- [ ] Renfo 1: Lafay 15-20min
-- [ ] Renfo 2: Lafay 15-20min
-- [ ] Tester nutrition sur sortie longue
+- [x] Sortie A: 25.1km, RPE 3, frais
+- [x] Sortie B: Côtes court 31.3km, 241m D+, RPE 5, ok
 
 ### Semaine 2 (2-8 fév)
-- [ ] Sortie A: Endurance 1h15-1h30
-- [ ] Sortie B: Force 1h (4x5min gros braquet)
-- [ ] Sortie C: Longue 2h15 (WE)
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+- [x] Sortie B: Côtes court 31.3km, 244m D+, RPE 4, moyen
+- [x] Sortie C: Créon 50km, 109m D+, RPE 5, ok
+- [x] Sortie A: Récup 19.7km, RPE 1, frais
 
 ### Semaine 3 (9-15 fév)
-- [ ] Sortie A: Endurance 1h15-1h30
-- [ ] Sortie B: Force 1h15 (5x5min gros braquet)
-- [ ] Sortie C: Longue 2h30 (WE)
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+- [x] Sortie A: 17.7km, grêle, RPE 3, oklm
+- [x] Sortie C: 48.4km, vent, RPE 5, dur
 
 ### Semaine 4 (16-22 fév)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15 (5x5min gros braquet)
-- [ ] Sortie C: Longue 2h30-3h (WE)
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
-- [ ] **BILAN PHASE 1** (voir questions ci-dessous)
-
-#### Questions bilan Phase 1
-1. Sensations générales sur les sorties longues (2h+)? Frais / OK / Cramé?
-2. Douleurs ou gênes récurrentes? (genoux, dos, selle)
-3. Fréquence cardiaque: stable en endurance ou dérive?
-4. As-tu tenu les 3 sorties/semaine? Si non, pourquoi?
-5. Nutrition: as-tu testé des trucs sur sortie longue?
-
-**Ajustement selon réponses:**
-- Si cramé → réduire volume S5-6, garder intensité basse
-- Si frais → on peut accélérer la progression volume
-- Si douleurs → identifier cause avant d'augmenter
+- [x] Sortie B: Côtes court 31.5km, 241m D+, RPE 7, dur (nutrition insuffisante)
+- [x] Sortie A: Endurance 30km, RPE 4, ok
+- [x] Sortie C: Côtes long 55.6km, 477m D+, RPE 7, dur (record D+)
 
 ---
 
 ## PHASE 2: FORCE & DÉNIVELÉ SIMULÉ (Mars)
 
 ### Semaine 5 (23 fév - 1 mar)
-- [ ] Sortie A: Endurance 1h30 + chercher du dénivelé (ponts, côtes)
-- [ ] Sortie B: Force 1h15 (6x5min gros braquet)
-- [ ] Sortie C: Longue 3h-3h30 (WE) - selon bilan S4
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+- [x] Sortie A: Bassin Arcachon 28km, RPE 4, ok
+- [x] Sortie B: Côtes court 30km, 238m D+, RPE 7, dur
+- [x] Sortie C: Longue 67.6km, 495m D+, RPE 6, bien
 
 ### Semaine 6 (2-8 mar)
-- [ ] Sortie A: Endurance 1h30 + dénivelé
-- [ ] Sortie B: Force 1h15 (6x5min)
-- [ ] Sortie C: Longue 3h-3h30 (WE) - finir fatigué mais pas détruit
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+- [x] Sortie A: Endurance 30km, RPE 2, oklm
+- [x] Sortie C: Longue record 77.5km, 724m D+, RPE 5, bien (19 PRs)
 
 ### Semaine 7 (9-15 mar)
-- [ ] Sortie A: Endurance 1h30 + dénivelé
-- [ ] Sortie B: Force 1h15 (6x5min)
-- [ ] Sortie C: Longue 3h30 (WE) - viser 200m D+ minimum
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
-- **Option:** WE Pyrénées #1 (voir section délocalisées) - FORTEMENT RECOMMANDÉ
+- [x] Sortie B: Côtes court 30.5km, 240m D+, RPE 5, ok (meilleure perf parcours, 25.2 km/h)
+- [x] Sortie A: Endurance pré-stage 34.9km, RPE 2, oklm
 
-### Semaine 8 (16-22 mar) - Charger avant off
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] Sortie C: Longue 3h30-4h (WE) - bien charger avant Cracovie
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+### Semaine 8 (16-18 mar) - Stage Oloron
+- [x] Stage J1 (JX): 71km, 802m D+, RPE 4, ok (record D+, premier contact montagne)
+- [x] Stage J2 (JY): 68.4km, 992m D+, RPE 7, dur (quasi 1000m D+, record pulvérisé)
+- [x] Sortie B: 29.4km, 358m D+, RPE 7, dur (3e jour consécutif, 2152m D+ en 3 jours)
 
 ### Semaine 9 (23-29 mar) - OFF / Cracovie
-- [ ] Course 1: 30-45min endurance
-- [ ] Course 2: 30-45min endurance
-- [ ] Course 3: 30-45min endurance (optionnel)
-- [ ] **BILAN PHASE 2** (voir questions ci-dessous)
-
-> Semaine off vélo (voyage Cracovie). Cross-training course à pied pour maintenir le cardio. Pas d'excès, allure facile.
-
-#### Questions bilan Phase 2
-1. Tu tiens 3h30 sans problème? Sensation en fin de sortie?
-2. Travail force: jambes plus puissantes ou pas de diff?
-3. As-tu fait le WE Pyrénées #1? Si oui: comment t'as géré le D+?
-4. Dénivelé max atteint sur une sortie? (ton record = 559m)
-5. Poids stable? Sommeil OK?
-6. Confiance sur l'objectif "finir le tour"? (1-10)
-
-**Ajustement selon réponses:**
-- Si WE Pyrénées pas fait → IMPÉRATIF de le caler S10-11
-- Si 3h30 difficile → réduire ambitions enchaînements
-- Si confiance basse → discuter des points bloquants
+- Repos complet, pas de cross-training
+- Récupération après le bloc S8 (2152m D+ en 3 jours)
 
 ---
 
-## PHASE 3: SPÉCIFIQUE TOUR (Avril)
+## PHASE 3: VOLUME & SPÉCIFIQUE (Avril-Mai)
 
-### Semaine 10 (30 mar - 5 avr)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] WE enchaînement: Sam 2h + Dim 3h
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
-- **Option:** Stage Oloron S10-11 (voir section délocalisées)
+### Semaine 10 (30 mar - 5 avr) - Reprise post-Cracovie
+- [ ] Sortie A: Endurance 1h30, reprendre en douceur
+- [ ] Sortie B: Côtes court + côtes raides (Hénin/Observatoire)
 
-### Semaine 11 (6-12 avr)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] WE enchaînement: Sam 2h + Dim 3h30
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
-- **Option:** Stage Oloron S10-11 (voir section délocalisées)
+### Semaine 11 (6-12 avr) - Relance
+- [ ] Sortie B: Côtes court + côtes raides, focus pentes 10%+
+- [ ] Sortie C: Côtes long (55km, 402m D+)
 
-### Semaine 12 (13-19 avr)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] WE enchaînement: Sam 2h30 + Dim 3h30
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
+### Semaine 12 (13-19 avr) - Monter en volume
+- [ ] Sortie B: Côtes court + côtes raides
+- [ ] Sortie C: Longue 75-80km avec D+ (~700m)
 - [ ] Préparer logistique tour (hébergement, équipement)
 
-### Semaine 13 (20-26 avr)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h15
-- [ ] WE enchaînement: Sam 2h30 + Dim 4h (sortie la plus longue)
-- [ ] Renfo 1: Lafay
-- [ ] Renfo 2: Lafay
-- **Option:** WE Pyrénées #2 (voir section délocalisées)
+### Semaine 13 (20-26 avr) - Semaine clé
+- [ ] Sortie A: Endurance légère milieu de semaine
+- [ ] Sortie C: **Les 100km** avec 800m+ D+ (objectif distance)
 
-### Semaine 14 (27 avr - 3 mai)
-- [ ] Sortie A: Endurance 1h30
-- [ ] Sortie B: Force 1h
-- [ ] WE enchaînement: Sam 2h + Dim 3h
-- [ ] Renfo 1: Lafay
+### Semaine 14 (27 avr - 3 mai) - Consolidation
+- [ ] Sortie B: Côtes court + côtes raides
+- [ ] WE enchaînement: Sam + Dim (simuler 2 jours consécutifs)
 - [ ] **BILAN PHASE 3** (voir questions ci-dessous)
 
 #### Questions bilan Phase 3
 1. Enchaînement Sam+Dim: comment tu te sens le dimanche matin?
 2. Sortie la plus longue réalisée? Distance et D+?
-3. As-tu fait le stage Oloron ou WE Pyrénées #2?
+3. Les 100km sont passés? Sensation?
 4. Gestion nutrition sur 4h+: ça passe? Fringales?
 5. Matériel: cuissard tient 4h sans douleur? Selle OK?
 6. Mentalement: tu te vois finir les 3 jours? Quelles craintes?
 
-**Ajustement selon réponses:**
-- Si enchaînements difficiles → affûtage plus long (réduire S15)
-- Si jamais fait de montagne → ALERTE ROUGE, caler sortie D+ en urgence
-- Si problème matos → régler MAINTENANT, pas en S16
-
 ---
 
-## PHASE 4: AFFÛTAGE (Mai)
+## PHASE 4: CHARGE & TAPER COURT (Mai)
 
-### Semaine 15 (4-10 mai)
-- [ ] Sortie A: Endurance 1h15
-- [ ] Sortie B: Force légère 45min (3x5min)
-- [ ] Sortie C: Longue 2h30 (WE)
-- [ ] Renfo: 1 séance légère
+### Semaine 15 (4-10 mai) - Stage Peyre
+- [ ] 4-5 sorties sur la semaine, simulation Creuse
+- [ ] Pas forcément très longues, objectif enchaîner les jours
+- [ ] Tester nutrition multi-jours
 - [ ] Vérifier équipement vélo (pneus, freins, transmission)
 
-### Semaine 16 (11-17 mai)
-- [ ] Sortie A: Endurance 1h
-- [ ] Sortie B: Rappel force 30min
-- [ ] Sortie C: 1h30-2h facile (WE)
+### Semaine 16 (11-17 mai) - Dernière charge
+- [ ] 1-2 sorties courtes en semaine pour tourner les jambes
+- [ ] **Grosse sortie sam 16 ou dim 17** (dernière longue avant la course)
 - [ ] Préparer sac, nutrition course
 - [ ] Tester tenue de course
 
 ### Semaine 17 - COURSE (18-24 mai)
-- [ ] Lun: Repos ou 30min très facile
-- [ ] Mar: 45min facile avec quelques accélérations
-- [ ] Mer: Repos
-- [ ] Jeu: 30min facile (déplacement vers Creuse?)
+- [ ] Lun-Mer: 1-2 sorties courtes pour tourner les jambes
+- [ ] Jeu: Repos (déplacement vers Creuse?)
 - [ ] **Ven 22: Étape 1 (Chrono) + Étape 2 (75km)**
 - [ ] **Sam 23: Étape 3 (Critérium) + Étape 4 (Boucle Poupou)**
 - [ ] **Dim 24: Étape 5 (Chaîne des Puys) - FINISHER!**
@@ -233,17 +155,13 @@
 - [x] Lieu confirmé
 - [ ] Fait
 
-### Stage #2 - Avril (S10) - Volume
-- **Lieu:** Pyrénées (à confirmer, possiblement même endroit que mars)
-- **Dates:** 7-10 avril (S10)
-- **Durée:** 4 jours
-- **Objectif:** Bloc volume, habituer aux cols
-- **Programme type:**
-  - J1: 2h endurance (découverte)
-  - J2: 3-4h sortie longue avec cols
-  - J3: 2h récup active
-  - J4: 2h30-3h consolidation (optionnel)
-- **Vigilance:** Rouler à ton allure, pas celle du pote. Max 1200m D+/jour.
+### Stage #2 - Peyre (S15) - Simulation Creuse
+- **Lieu:** Peyre
+- **Dates:** 4-10 mai (S15)
+- **Durée:** ~5 jours
+- **Objectif:** Simulation Creuse, enchaîner 4-5 jours de vélo
+- **Programme:** Sorties quotidiennes, pas forcément très longues, focus enchaînement
+- **Vigilance:** Garder de l'énergie pour la grosse sortie S16 (16-17 mai)
 - [ ] Lieu confirmé
 - [ ] Fait
 
@@ -261,6 +179,17 @@
   - https://www.strava.com/activities/14731308903
   - ~2h-2h15, bon volume + dénivelé
 
+### Bordeaux - Côtes raides (10%+)
+
+Segments pour travail spécifique pentes raides (Floirac/Cenon) :
+
+| Segment | Pente moy | Longueur | D+ | Strava |
+|---------|-----------|----------|-----|--------|
+| Côte d'Hénin | 10.7% | 247m | 26m | https://www.strava.com/segments/6592097 |
+| Observatoire Hard Climb | 9.5% | 387m | 37m | https://www.strava.com/segments/15769235 |
+
+À intégrer dans les séances force (B) S10-14 pour préparer les murs type critérium.
+
 ### Oloron / Béarn
 - **JX** - https://ridewithgps.com/routes/54160848
   - 69.5 km / 842m D+ - 2 grosses montées
@@ -268,6 +197,19 @@
 - **JY** - https://ridewithgps.com/routes/54160862
   - ~69 km / 1050m D+ - 2 grosses montées
   - Départ Oloron-Sainte-Marie
+
+### Peyre - Côtes pour stage S15
+
+| Segment | Pente moy | Longueur | D+ | Strava |
+|---------|-----------|----------|-----|--------|
+| Côte à Dédé | 8.9% | 450m | 40m | https://www.strava.com/segments/15343188 |
+| Chapelle de Moustrou | 7.7% | 786m | 61m | https://www.strava.com/segments/26562892 |
+| D56 Climb | 6.3% | 1.7km | 107m | https://www.strava.com/segments/3507040 |
+| Col de Labat | 6.1% | 915m | 56m | https://www.strava.com/segments/13218764 |
+| Le pentu de Peyre | 5.4% | 1.2km | 64m | https://www.strava.com/segments/12747084 |
+| Castelner c'est long | 3.2% | 3.2km | 104m | https://www.strava.com/segments/21720317 |
+
+Boucles de 40-60km possibles avec 400-600m D+. Terrain vallonné (~11m D+/km).
 
 ---
 
@@ -281,25 +223,25 @@ _Espace pour noter sensations, ajustements, questions..._
 
 Basé sur 62 activités récupérées.
 
-### Historique clé
+### Records actuels (mis à jour 18 mars 2026)
 | Stat | Valeur | Date |
 |------|--------|------|
-| Record distance | 77 km | 15 juil 2025 |
-| Record D+ | 559 m (31 km) | 3 août 2025 |
-| Meilleur enchaînement | 5 jours, ~380 km | Août 2025 (Canal 2 Mers) |
-| Dernier arrêt long | Oct-Déc 2025 (3 mois) | - |
+| Record distance | 77.5 km | 5 mar 2026 (S6E2) |
+| Record D+ | 992 m (68.4 km) | 17 mar 2026 (Oloron J2) |
+| Meilleur enchaînement | 3 jours, 169km, 2152m D+ | 16-18 mar 2026 (Oloron) |
+| Enchaînement 2j montagne | 139.4km, 1794m D+ | 16-17 mar 2026 |
 
 ### Vitesses de référence
-- Sortie normale: 24-25 km/h
-- Endurance/loisir: 22-23 km/h
-- Cyclotourisme chargé: 15-19 km/h
+- Sortie force: 25.2 km/h (côtes court S7E1)
+- Endurance: 23-25 km/h
+- Longue avec D+: 22-25 km/h
 
-### Points forts identifiés
-- Capacité à enchaîner les jours (prouvé août 2025)
-- Tient bien 60-70 km sur le plat
-- Forme résiduelle correcte malgré l'arrêt
+### Points forts confirmés
+- Enchaîne les jours avec D+ (prouvé Oloron)
+- Progression force nette (Bouliac -45s en 3 semaines)
+- Gestion effort en amélioration (même parcours, RPE en baisse)
 
 ### Points à travailler
-- Dénivelé: max 559m, la Creuse = 1000-1200m/jour
-- Reprendre progressivement après 3 mois d'arrêt
-- Expérience montagne quasi nulle
+- Pentes raides (10%+) : en difficulté, à bosser avec Hénin/Observatoire
+- Casser les 100km
+- Nutrition : OK quand barres régulières, catastrophique quand oubli (S4E1)
