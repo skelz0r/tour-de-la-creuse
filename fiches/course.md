@@ -7,9 +7,10 @@
 | Ven 22 | E1 (Chrono) | 20.7 km | 247m | Plat, effort court |
 | Ven 22 | E2 | 75.2 km | 1118m | Vallonné, longue montée finale |
 | Sam 23 | E3 | 76 km | 1352m | Descente puis vallonné, ça monte tout le retour |
+| Sam 23 | E4 (Critérium) | 6 km | 180m | 4 tours x 1.5km, Mur de Vichez |
 | Dim 24 | E5 (Chaîne des Puys) | 111 km | 1913m | La grosse, 7 montées |
 
-**Total : 283 km, 4630m D+ sur 3 jours**
+**Total : 289 km, 4810m D+ sur 3 jours**
 
 ---
 
@@ -92,6 +93,21 @@ Profil quasi plat (654-693m), vallonné léger. C'est un contre-la-montre, pas u
 
 ---
 
+## Étape 4 - Critérium (Sam après-midi)
+
+**6 km (4 tours x 1.5km) | ~180m D+ | ~15-20 min**
+
+4 tours d'un circuit court avec le **Mur de Vichez** (409m, 10.8% moy, max ~15-18% réel).
+
+### Stratégie
+- Tour 1 : reconnaissance, gérer le rythme
+- Le mur : petit plateau + grand pignon, rester assis ou danseuse courte
+- Le passage raide dure ~1 min, survivre et relancer après
+- 4 tours c'est court, mais avec E3 dans les jambes ça pique
+- Pas besoin de flasque, juste un bidon
+
+---
+
 ## Étape 5 - Chaîne des Puys (Dim)
 
 **111 km | 1913m D+ | ~4h30-5h**
@@ -149,6 +165,7 @@ C'est l'étape reine. 7 montées, jamais vraiment plat. Profil en dents de scie.
 | Pause midi | - | - | - | Recharger bidons + déjeuner |
 | E2 | 4 | 20 min | 45 min | 2 (750ml) |
 | E3 | 4-5 | 20 min | 40 min | 2 (750ml) |
+| E4 | 0 | - | - | 1 bidon |
 | E5 | 6 | 20 min | 35-40 min | 2 (750ml) + ravito |
 
 ### Récupération entre étapes
